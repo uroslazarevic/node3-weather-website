@@ -10,7 +10,7 @@ weatherForm.addEventListener("submit", e => {
   messageOne.textContent = "Loading...";
   messageTwo.textContent = "";
 
-  fetch("http://localhost:3000/weather?address=" + location)
+  fetch("/weather?address=" + location)
     .then(res => res.json())
     .then(data => {
       if (data.error) {
@@ -21,3 +21,8 @@ weatherForm.addEventListener("submit", e => {
       }
     });
 });
+
+// Setting SSH Keys
+
+// $ ls -a -l ~/.ssh
+// $ eval ssh-agent -s
